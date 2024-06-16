@@ -52,6 +52,10 @@ p {
   color: #6D6E70;
 }
 
+a {
+  font-family: "Poppins", sans-serif;
+}
+
 .s-0 {
   margin: 0;
   padding: 0;
@@ -686,6 +690,7 @@ a {
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 8px 24px;
 }
 
 .border {
@@ -717,4 +722,15 @@ a {
   border-radius: 4px;
   color: #FAFCFC;
   padding: 8px;
+}
+
+.img-profile {
+  width: 56px;
+  height: 56px;
+  background-color: #4E4E50;
+  border-radius: 50%;
+}
+
+.container-posts {
+  display: flex;
 }/*# sourceMappingURL=style.css.map */

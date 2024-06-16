@@ -2,10 +2,14 @@ import Posts from "../Posts"
 
 export default function Article(){
   return (
-    <>
-      <Posts />
-      <h1>Article</h1>
-    </>
+    <section className="container">
+      <h3>Article</h3>
+      <div className="mt-5 container-posts">
+        <Posts />
+        <Posts />
+        <Posts />
+      </div>
+    </section>
   )
 }
 
