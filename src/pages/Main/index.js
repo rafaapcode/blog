@@ -1,27 +1,27 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import api from "../../Services/api.js";
 import Post from "../../components/Posts";
 
 const Main = () => {
   const [posts, setPosts] = useState([]);
 
-
-  async function handleAxios() {
-    try {
-      const response = await api.get("/posts");
-      setPosts(response.data);
-      console.log(response.data);
-    } catch (error) {
-      console.log(error);
-    }
+  function handleAxios() {
+    api.get("/posts")
+      .then(res => setPosts(res.data))
+      .catch(err => console.error(err.message))
   }
+
+  useEffect(() => {
+    // api.get("/posts")
+    //   .then(res => setPosts(res.data))
+    //   .catch(err => console.error(err.message))
+    handleAxios();
+  }, []);
 
   return (
     <>
       <section className="container">
-        <h1>Main.js</h1>
-        <button onClick={handleAxios}>Fazer requisição</button>
-
+        <h2 className="mt-3">Articles</h2>
         <div className="mt-5 container-posts">
           {
             posts.map(post => {
