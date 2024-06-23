@@ -12,16 +12,13 @@ const Main = () => {
   }
 
   useEffect(() => {
-    // api.get("/posts")
-    //   .then(res => setPosts(res.data))
-    //   .catch(err => console.error(err.message))
     handleAxios();
   }, []);
 
   return (
     <>
       <section className="container">
-        <h2 className="mt-3">Articles</h2>
+        <h2 className="mt-3">Página Principal</h2>
         <div className="mt-5 container-posts">
           {
             posts.map(post => {
